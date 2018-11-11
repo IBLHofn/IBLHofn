@@ -1,0 +1,74 @@
+package Swing;
+import java.awt.Font;
+import java.awt.Menu;
+import java.awt.MenuBar;
+import java.awt.MenuItem;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+//Swing（图形用户界面）
+//显示一个界面
+public class DemoF extends JFrame{
+	private JTextArea textArea;//定义一个属性，属性是一个文本域
+	private JScrollPane jsp;//定义一个私有属性，这个属性是一个滚动条
+	private Font font;//定义一个私有属性，这个属性是一个字体类型
+	private MenuBar bar;//菜单栏
+	private Menu menu1,menu2,menu3,menu4,menu5;//菜单
+	private MenuItem mi1,mi2,mi3,mi4,mi5;
+	private MenuItem hi1,hi2,hi3;//菜单子选项
+	private MenuItem ji1,ji2;
+	private MenuItem ki1;
+	private MenuItem li1,li2;
+	public DemoF() {
+		setTitle("文本编辑器");//标题
+		JTextArea textArea =new JTextArea();//产生一个文本域
+		JScrollPane jsp =new JScrollPane(textArea);//将文本域加到滚动条面板上
+	    Font font=new Font("宋体", Font.PLAIN, 30);//设置字体项目
+	    this.add(jsp);//即将jsp加到界面
+	    textArea.setFont(font);//将字体设置到文本域中
+	    setBounds(400, 100, 1000, 800);//设置界面的位置和大小
+	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//当关闭时释放
+	    setVisible(true);//显示界面
+		Menu menu1=new Menu("文件");
+		Menu menu2=new Menu("编辑");
+		Menu menu3=new Menu("格式");
+		Menu menu4=new Menu("查看");
+		Menu menu5=new Menu("帮助");
+		MenuItem mi1=new MenuItem("新建");
+		MenuItem mi2=new MenuItem("保存");
+		MenuItem mi3=new MenuItem("另存为");
+		MenuItem mi4=new MenuItem("页面设置");
+		MenuItem mi5=new MenuItem("打印");
+		MenuItem hi1=new MenuItem("复制");
+		MenuItem hi2=new MenuItem("粘贴");
+		MenuItem hi3=new MenuItem("删除");
+		MenuItem ji1=new MenuItem("自动换行");
+		MenuItem ji2=new MenuItem("字体");
+		MenuItem ki1=new MenuItem("状态栏");
+		MenuItem li1=new MenuItem("查看帮助");
+		MenuItem li2=new MenuItem("查看记事本");
+		MenuBar bar=new MenuBar();//设置菜单栏
+		this.setMenuBar(bar);
+		bar.add(menu1);
+		bar.add(menu2);
+		bar.add(menu3);
+		bar.add(menu4);
+		bar.add(menu5);
+		menu1.add(mi1);
+		menu1.add(mi2);
+		menu1.add(mi3);
+		menu1.add(mi4);
+		menu1.add(mi5);
+		menu2.add(hi1);
+		menu2.add(hi2);
+		menu2.add(hi3);
+		menu3.add(ji1);
+		menu3.add(ji2);
+		menu4.add(ki1);
+		menu5.add(li1);
+		menu5.add(li2);
+	}
+	public static void main(String[] args) {
+		new DemoF();
+	}
+}
