@@ -1,0 +1,29 @@
+package Swing;
+import java.util.Calendar;
+//日历类
+public class DemoA {
+	public void a() {
+		//获取日历类的对象，calendar是一个抽象类
+		Calendar c=Calendar.getInstance();
+		int year=c.get(Calendar.YEAR);
+		int month=c.get(Calendar.MONTH);
+		int data=c.get(Calendar.DAY_OF_MONTH);
+		int hour12=c.get(Calendar.HOUR);
+		int hour24=c.get(Calendar.HOUR_OF_DAY);
+		int minute=c.get(Calendar.MINUTE);
+		int second=c.get(Calendar.SECOND);
+		int week=c.get(Calendar.DAY_OF_WEEK);
+		System.out.println(year);
+		System.out.println(month);
+		System.out.println(data);
+		System.out.println(hour12);
+		System.out.println(hour24);
+		System.out.println(minute);
+		System.out.println(second);
+		System.out.println(week);
+	}
+	public static void main(String[] args) {
+		DemoA d=new DemoA();
+		d.a();
+	}
+}
