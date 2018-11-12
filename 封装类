@@ -1,4 +1,57 @@
 package Swing;
+/*
+ * 封装类 （8个  Integer  Double  Byte 
+ *  Character  Long  Boolean Short Float）
+ */
+public class DemoC {
+	public static void a() {
+		int a1=1;//原始数据类型不能调用属性和方法
+		Integer a2=5;//引用数据类型可以调用属性和方法
+		System.out.println(a1);
+		System.out.println(a2);
+	}
+	public static void b() {
+		int b1=Integer.parseInt("8");
+		byte b2=Byte.parseByte("25");
+		double b3=Double.parseDouble("7.2");
+		char b4="ksdfn".charAt(3);
+		long b5=Long.parseLong("23");
+		short b6=Short.parseShort("89");
+		float b7=Float.parseFloat("3.9f");
+		System.out.println(b1);
+		System.out.println(b2);
+		System.out.println(b3);
+		System.out.println(b4);
+		System.out.println(b5);
+		System.out.println(b6);
+		System.out.println(b7);
+	}
+	public static void c() {
+		int max=Integer.MAX_VALUE;//求最大值
+		int min=Integer.MIN_VALUE;//求最小值
+		System.out.println(max+"\t"+min);
+		String c1=Integer.toBinaryString(9);//十进制到二进制
+		String c2=Integer.toOctalString(9);//十进制到八进制
+		String c3=Integer.toHexString(9);//十进制到十六进制
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c3);
+	}
+	public static void main(String[] args) {
+		DemoC.b();
+	}
+}
+8
+25
+7.2
+f
+23
+89
+3.9
+
+
+
+package Swing;
 
 public class d {
 	public static void main(String[] args) {
